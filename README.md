@@ -12,13 +12,12 @@ A professional football data analytics dashboard built for a university Probabil
 
 ## Technology Stack
 - **Backend**: FastAPI (Python), Pandas, NumPy, SciPy, Scikit-learn.
-- **Frontend**: React, Vite, Tailwind CSS, Plotly.js, React Query, Axios.
+- **Frontend**: Vanilla HTML, CSS, JavaScript, Chart.js.
 
 ## Getting Started
 
 ### 1. Prerequisites
 - Python 3.8+
-- Node.js 16+
 - `male_players.csv` dataset in the `backend` folder.
 
 ### 2. Backend Setup
@@ -30,12 +29,9 @@ uvicorn main:app --reload
 The API will be available at `http://localhost:8000`.
 
 ### 3. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-The application will be available at `http://localhost:5173`.
+Because the frontend is built with pure HTML/CSS/JS, the FastAPI backend automatically serves it! 
+Simply go to:
+`http://localhost:8000/frontend/index.html`
 
 ---
 *Created by Antigravity AI*
