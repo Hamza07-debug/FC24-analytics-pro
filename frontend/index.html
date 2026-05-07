@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FC24 Analytics Pro — advanced player intelligence, probability modeling and scouting for the EA Sports FC24 player population.">
+    <meta name="theme-color" content="#06090f">
+    <title>FC24 Analytics Pro · Player Intelligence</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>FC24 ANALYTICS<span>PRO</span></h2>
+                <div class="player-count-badge" id="player-count">POPULATION: 0</div>
+            </div>
+
+            <!-- Navigation: Plain text -->
+            <nav class="sidebar-nav">
+                <button class="nav-link active" data-page="dashboard">Dashboard Overview</button>
+                <button class="nav-link" data-page="graphical">Graphical Analysis</button>
+                <button class="nav-link" data-page="stats">Descriptive Statistics</button>
+                <button class="nav-link" data-page="probability">Probability Distributions</button>
+                <button class="nav-link" data-page="regression">Regression Modeling</button>
+                <button class="nav-link" data-page="players">Scouting & Comparison</button>
+                <button class="nav-link" data-page="dataset">Dataset Explorer</button>
+            </nav>
+
+            <!-- Filters -->
+            <div class="sidebar-filters">
+                <h3>GLOBAL FILTERS</h3>
+                
+                <div class="filter-group">
+                    <label>Leagues</label>
+                    <div id="filter-leagues" class="checkbox-group"></div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Position Groups</label>
+                    <div id="filter-pos-groups" class="checkbox-group"></div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Preferred Foot</label>
+                    <div id="filter-foot" class="checkbox-group"></div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Age Range: <span id="age-val" class="mono" style="color:var(--primary);">17 - 42</span></label>
+                    <div class="range-slider-group">
+                        <input type="range" id="age-min" min="17" max="42" value="17">
+                        <input type="range" id="age-max" min="17" max="42" value="42">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Overall Range: <span id="ovr-val" class="mono" style="color:var(--primary);">48 - 91</span></label>
+                    <div class="range-slider-group">
+                        <input type="range" id="ovr-min" min="48" max="91" value="48">
+                        <input type="range" id="ovr-max" min="48" max="91" value="91">
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-area">
+            <div class="main-header-row">
+                <div class="header-left">
+                    <button id="sidebar-toggle">☰</button>
+                    <h1 id="current-page-label">DASHBOARD</h1>
+                </div>
+                <span id="syllabus-badge" class="syllabus-badge">SYLLABUS OVERVIEW</span>
+            </div>
+            
+            <div id="page-content">
+                <!-- Pages render here -->
+            </div>
+
+            <!-- Footer Navigation -->
+            <div id="footer-nav-container"></div>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/graphical.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/probability.js"></script>
+    <script src="js/regression.js"></script>
+    <script src="js/players.js"></script>
+    <script src="js/dataset.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
