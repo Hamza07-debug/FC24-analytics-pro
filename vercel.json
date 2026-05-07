@@ -16,6 +16,10 @@
       "dest": "backend/main.py"
     },
     {
+      "src": "/(css|js|assets)/(.*)",
+      "dest": "/frontend/$1/$2"
+    },
+    {
       "src": "/frontend/(.*)",
       "dest": "/frontend/$1"
     },
