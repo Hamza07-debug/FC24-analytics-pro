@@ -34,4 +34,3 @@ Simply go to:
 `http://localhost:8000/frontend/index.html`
 
 ---
-*Created by Antigravity AI*
